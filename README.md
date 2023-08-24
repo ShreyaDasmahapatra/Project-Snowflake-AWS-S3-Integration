@@ -18,13 +18,12 @@ STEPs.
 	c.Open the file in S3.The following is the path of the file
 	S3 URI:      s3:// /snowflake-s3-shreya /netflix_titles.csv	
 2.Create permissions/Role so that 3rd party can communicate with AWS:
-	a.IAM>>policies>>create policy>>JSON>> copy paste json from S3-policy file from your local ,give it a name and create policies.
+a.IAM>>policies>>create policy>>JSON>> copy paste json from S3-policy file from your local ,give it a name and create policies.
 
-	b. IAM>>policies>>create roles>>aws account>>attach the name to the policy created and
- 					a.aws account because we are giving access to 3rd party
-					b. This account (516915275482)	
-					c.Copy paste the above in the external ID
-					>>attach the role to the policy created and create role>>click on to the role and copy the arn no. 							(arn:aws:iam::516915275482:role/snowflake-aws-shreya)
+b. IAM>>policies>>create roles>>aws account>>attach the name to the policy created and
+ 	a.aws account because we are giving access to 3rd party
+	b. This account (516915275482)	
+	c.Copy paste the above in the external ID>>attach the role to the policy created and create role>>click on to the role and copy the arn no. 									(arn:aws:iam::516915275482:role/snowflake-aws-shreya)
 
 3.Create database,schema,storage integration(refer snowflake.txt)
 	Like  AWS has created the arn similar to that snowflake will also create an external id and arn which needs to be communicated to aws.
@@ -39,9 +38,7 @@ IAM>>Roles>>snowflake-aws-shreya>>Trust Relationship>>Edit trust policy>> add th
 
 
 
-
-	Trust Policy
-
+Trust Policy
 {
 	"Version": "2012-10-17",
 	"Statement": [
