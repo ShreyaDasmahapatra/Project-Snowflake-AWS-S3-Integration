@@ -1,6 +1,6 @@
 # Snowflake-S3-Integration
 DATA FLOW DIAGRAM
-
+![Alt text](image link)
  
 
 Objective: Read the file from S3 bucket and make it available in snowflake env.
