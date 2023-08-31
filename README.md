@@ -13,22 +13,22 @@ So to support the above we need the following: <br>
 
 STEPs. <br>
 1.Create S3 bucket :  <br>
-	a.Give it a name and keep everything as default. <br>
-	b.Upload file to the bucket <br>
-	c.Open the file in S3.The following is the path of the file <br>
-	S3 URI:  s3:// /snowflake-s3-shreya /netflix_titles.csv	<br>
+					a.Give it a name and keep everything as default. <br>
+					b.Upload file to the bucket <br>
+					c.Open the file in S3.The following is the path of the file <br>
+						S3 URI:  s3:// /snowflake-s3-shreya /netflix_titles.csv	<br>
 2.Create permissions/Role so that 3rd party can communicate with AWS: <br>
-a.IAM>>policies>>create policy>>JSON>> copy paste json from S3-policy file from your local ,give it a name and create policies. <br>
+					a.IAM>>policies>>create policy>>JSON>> copy paste json from S3-policy file from your local ,give it a name and create policies. <br>
 
-b. IAM>>policies>>create roles>>aws account>>attach the name to the policy created and <br>
- 	a.aws account because we are giving access to 3rd party <br>
-	b. This account (516915275482)	<br>
-	c.Copy paste the above in the external ID>>attach the role to the policy created and create role>>click on to the role and copy the arn no. <br>									(arn:aws:iam::516915275482:role/snowflake-aws-shreya) <br>
+                                        b. IAM>>policies>>create roles>>aws account>>attach the name to the policy created and <br>
+ 	                                 		i.aws account because we are giving access to 3rd party <br>
+							ii. This account (516915275482)	<br>
+							iii.Copy paste the above in the external ID>>attach the role to the policy created and create role>>click on to the role and copy the arn no. <br>									(arn:aws:iam::516915275482:role/snowflake-aws-shreya) <br>
 
 3.Create database,schema,storage integration(refer snowflake.txt) <br>
-	Like  AWS has created the arn similar to that snowflake will also create an external id and arn which needs to be communicated to aws. <br>
-	Snowflake arn : arn:aws:iam::516915275482:role/snowflake-s3-shreya <br>
-	Snowflake external Id : PC46691_SFCRole=2_i8FvJBQdxjklSfKAVRsDmjc7z/Y= <br>
+					Like  AWS has created the arn similar to that snowflake will also create an external id and arn which needs to be communicated to aws. <br>
+					Snowflake arn : arn:aws:iam::516915275482:role/snowflake-s3-shreya <br>
+					Snowflake external Id : PC46691_SFCRole=2_i8FvJBQdxjklSfKAVRsDmjc7z/Y= <br>
 4. Map 3rd party(snowflake) details to roles of AWS <br>
 IAM>>Roles>>snowflake-aws-shreya>>Trust Relationship>>Edit trust policy>> add the above arn and external id to the code <br>
 
