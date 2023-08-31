@@ -37,7 +37,7 @@ IAM>>Roles>>snowflake-aws-shreya>>Trust Relationship>>Edit trust policy>> add th
 
 
 
-'''
+```
 Trust Policy
 {
 	"Version": "2012-10-17",
@@ -56,7 +56,7 @@ Trust Policy
 		}
 	]
 }
-'''
+```
 <br>
 						
 
