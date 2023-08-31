@@ -13,7 +13,7 @@ So to support the above we need the following: <br>
 
 STEPs. <br>
 1.Create S3 bucket :  <br>
-&nbsp&nbsp&nbsp&nbspa.Give it a name and keep everything as default. <br>
+&nbsp &nbsp &nbsp &nbspa.Give it a name and keep everything as default. <br>
 					b.Upload file to the bucket <br>
 					c.Open the file in S3.The following is the path of the file <br>
 						S3 URI:  s3:// /snowflake-s3-shreya /netflix_titles.csv	<br>
